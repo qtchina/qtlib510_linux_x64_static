@@ -1,0 +1,14 @@
+prefix=/opt/qt510st
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 X11Extras
+Description: Qt X11Extras module
+Version: 5.10.1
+Libs: -L${libdir} -lQt5X11Extras 
+Libs.private: -L/opt/qt510st/lib -lQt5Gui -lGL -lqtlibpng -lqtharfbuzz -lQt5Core -lm -lqtpcre2 -ldl -lpthread -lQt5Gui -L/opt/qt510st/lib -lqtlibpng -lqtharfbuzz -lQt5Core -lpthread -lm -lqtpcre2 -ldl -lGL 
+Cflags: -DQT_X11EXTRAS_LIB -I${includedir}/QtX11Extras -I${includedir}
+Requires: Qt5Core Qt5Gui
+
